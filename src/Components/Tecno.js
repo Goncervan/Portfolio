@@ -39,10 +39,10 @@ export default function Tecno() {
 
     return (
         <div className='containerPrincipal'>
-            <h1 className='tecnoTitle'>technologies</h1>
+            <h1 ref={ref} className='tecnoTitle'>technologies</h1>
             <div className='tecnos'>
                 {arr.map((el,i) => (
-                <motion.div key={i} ref={ref} initial={{ x: i % 2 === 0 ? -200 : 200, opacity: 0, scale: 0, rotate: 0 }} animate={controls} >
+                <motion.div key={i}  initial={{ x: i % 2 === 0 ? -200 : 200, opacity: 0, scale: 0, rotate: 0 }} animate={controls} >
                     {el.data}
                 </motion.div>
                 ))}

@@ -17,15 +17,16 @@ const modal = {
         transition: { delay: 0.5 }
     }
 }
+export default function Modal({ showModal, result, setShowModal, error }) {
 
-export default function Modal({ showModal, closeModal, result, error }) {
+
     return (
         <AnimatePresence exitBeforeEnter>
             {showModal ? (
                 <motion.div className="backdrop" exit="hidden" variants={backdrop} initial="hidden" animate="visible">
                     <motion.div className="modal" variants={modal}>
                         <p>{result ? result : error}</p>
-                        <button onClick={() => {closeModal()}}><AiOutlineClose /></button>
+                        <button onClick={() => {setShowModal(false)}}><AiOutlineClose /></button>
                     </motion.div>
                 </motion.div>
             ) : (<></>)}
