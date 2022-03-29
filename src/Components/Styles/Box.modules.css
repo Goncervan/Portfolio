@@ -1,0 +1,77 @@
+.container{
+    margin-top: 160px;
+    width: 600px;
+    height: 640px;
+    background:#5d8af4d8;
+    box-shadow: 10px 10px 6px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    font-family: sans-serif;
+    gap: 20px;
+}
+
+.img{       
+    position: absolute;
+    top: -150px;
+    border: 5px solid var(--background);
+    border-radius: 50%;
+    width: 300px;
+    object-fit: fill;
+}
+.developer{
+    margin-top: 100px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+.location{
+    width: 100%;
+    text-align: center;
+}
+.description{
+    line-height: 50px;
+    font-size: 26px;
+    width: 80%;
+    height: auto;
+    text-align: center;
+}
+
+.icons{
+    margin-top: 10px;
+    width: 80%;
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.icon{
+    width: 100%;
+    font-size: 60px;
+    color:#000;
+    transition: all .3s;
+}
+.icon:hover{
+    color: var(--primary);
+}
+/* SMARTPHONES PORTRAIT */
+@media only screen and (min-width: 300px) {
+
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (max-width: 768px) {
+    .container{
+        width: 100%;
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .developer{
+        margin-top: 140px;
+    }
+}

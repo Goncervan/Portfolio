@@ -1,0 +1,130 @@
+
+.container-form{
+    background: var(--secondary);
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 25px 40px 10px 40px;
+    border-radius: 15px;
+}
+.form-title{
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-family: var(--primary-font);
+    color: var(--background);
+}
+.contact-form{
+    padding: 10px 0 0 0;
+}
+.form-row{
+    display: flex;
+    margin: 32px 0;
+}
+.input-data{
+    width: 100%;
+    height: 40px;
+    margin: 0 20px;
+    position: relative;
+}
+
+.textarea{
+    height: 70px;
+} 
+.input, .inputText{
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    background: var(--secondary);
+    border-bottom: 2px solid rgb(0,0,0,0.2);
+    padding-left: 5px;
+    caret-color: var(--primary);
+}
+
+.inputText{
+    resize: none;
+    padding-top: 10px;
+}
+.input:focus ~ label, .inputText:focus ~ label,
+.input:valid ~ label, .inputText:valid ~ label{
+    transform: translateY(-30px);
+    color: var(--font-color);
+    background: var(--secondary);
+}
+
+.input:focus, .inputText:focus{
+    outline: none;
+}
+.input-data label{
+    position: absolute;
+    bottom:10px;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all .3s ease;
+}
+.textarea label{
+    width: 100%;
+    bottom: 40px;
+}
+
+.input-data .underline{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+}
+.underline:before,
+.underline:after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: var(--font-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: all 0.3s ease;
+}
+
+.input:focus ~ .underline:before, .underline:after,
+.inputText:focus ~ .underline:before, .underline:after,
+.input:valid ~ .underline:before, .underline:after,
+.inputText:valid ~ .underline:before, .underline:after{
+    transform: scaleX(1);
+}
+
+
+.submit-btn .input-data{
+    height: 45px;
+    width: 100%;
+    overflow: hidden;
+}
+.submit-btn .input-data .input{
+    background: var(--primary);
+    border-radius: 10px;
+    border: none;
+    color: var(--font-color);
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.submit-btn .input-data .input:hover{
+    background: var(--font-color);
+    color:  var(--primary);
+}
+@media (max-width: 700px) {
+    .container-form{
+        padding: 10px;
+    }
+    .form-row{
+        display: block;
+    }
+    .input-data{
+        margin: 35px 0;
+    }
+}

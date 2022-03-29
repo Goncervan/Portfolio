@@ -1,0 +1,71 @@
+.containerPrincipal{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background: var(--secondary);
+    border-radius: 50px;
+}  
+
+.tecnoTitle{
+    font-family: 'Zilla Slab', serif;
+    margin-top: 20px;
+    width: 80%;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--font-color);
+    font-size: 40px;
+    letter-spacing: 16px;
+    font-weight: 200;
+    border-bottom: 2px solid var(--background);
+}
+
+.tecnos{
+    padding: 40px;
+    width: 60%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+}
+.tecnos div{
+    margin: 20px;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Icon{
+    width: 100%;
+    font-size: 600%;
+    transition: .2s;
+}
+.Icon:hover{
+    color: var(--primary);
+}
+
+@media only screen and (max-width: 400px){
+    .tecnoTitle{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .tecnos{
+        width: 100%;
+        gap: 5px;
+    }
+    .tecnoTitle{
+        width: 95%;
+        letter-spacing: 0;
+        line-break:strict;
+    }
+    .Icon{
+        font-size: 350%;
+    }
+} 
