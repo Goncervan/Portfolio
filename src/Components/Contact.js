@@ -26,7 +26,7 @@ export default function Contact() {
 
     return (
         <div className='container-form'>
-            <Modal showModal={showModal} result={result} error={error} setShowModal={setShowModal}/>
+            <Modal  showModal={showModal} result={result} error={error} setShowModal={setShowModal}/>
             <h1 className="form-title">Contact Me!</h1>
             <form onSubmit={(e) => sendEmail(e)} ref={form} className="contact-form">
                 <div className="form-row">
