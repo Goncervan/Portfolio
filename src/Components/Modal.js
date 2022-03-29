@@ -18,14 +18,14 @@ const modal = {
     }
 }
 
-export default function Modal({ showModal, setShowModal, result, error }) {
+export default function Modal({ showModal, closeModal, result, error }) {
     return (
         <AnimatePresence exitBeforeEnter>
             {showModal ? (
                 <motion.div className="backdrop" exit="hidden" variants={backdrop} initial="hidden" animate="visible">
                     <motion.div className="modal" variants={modal}>
                         <p>{result ? result : error}</p>
-                        <button onClick={() => {setShowModal(false)}}><AiOutlineClose /></button>
+                        <button onClick={() => {closeModal()}}><AiOutlineClose /></button>
                     </motion.div>
                 </motion.div>
             ) : (<></>)}
