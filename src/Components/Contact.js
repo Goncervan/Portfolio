@@ -13,7 +13,7 @@ export default function Contact() {
         emailjs.sendForm('service_agrx87v', 'template_j5x0jag', form.current, '_CSI2FYbP0lxTWEJF')
             .then(() => {
                 setShowModal(true)
-                setResult("Mensaje enviado! Gracias!")
+                setResult("Message sent! Thanks!")
             }, (error) => {
                 setShowModal(true)
                 setError(error.text);
