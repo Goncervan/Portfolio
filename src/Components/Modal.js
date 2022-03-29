@@ -4,7 +4,7 @@ import './Styles/Modal.modules.css'
 import { AiOutlineClose } from 'react-icons/ai';
 const backdrop = {
     visible: { opacity: 1 },
-    hidden: { opacity: 0 }
+    hidden: { opacity: 0 },
 }
 const modal = {
     hidden: {
@@ -22,7 +22,7 @@ export default function Modal({ showModal, setShowModal, result, error }) {
     return (
         <AnimatePresence exitBeforeEnter>
             {showModal && (
-                <motion.div className="backdrop" variants={backdrop} initial="hidden" animate="visible">
+                <motion.div className="backdrop" exit="hidden" variants={backdrop} initial="hidden" animate="visible">
                     <motion.div className="modal" variants={modal}>
                         <p>{result ? result : error}</p>
                         <button onClick={() => {setShowModal(false)}}><AiOutlineClose /></button>

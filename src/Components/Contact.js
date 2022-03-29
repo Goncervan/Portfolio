@@ -21,8 +21,8 @@ export default function Contact() {
             e.target.reset();
     };
     const [error,setError] = useState("");
-    const [result,setResult] = useState("");
-    const [showModal,setShowModal] = useState(false);
+    const [result,setResult] = useState("Mensaje enviado! Gracias!");
+    const [showModal,setShowModal] = useState(true);
 
     return (
         <div className='container-form'>
