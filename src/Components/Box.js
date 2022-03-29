@@ -3,7 +3,7 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { BsFillGeoAltFill, BsFillKeyboardFill } from 'react-icons/bs'
 import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
-import perfilFoto from '../assets/img/image.jpg'
+import perfilFoto from '../assets/img/Silueta.jpeg'
 import './Styles/Box.modules.css'
 
 export default function Box() {
@@ -23,10 +23,9 @@ export default function Box() {
             }
         })
     }
-// src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
     return (
         <motion.div ref={ref} initial={{ y: "-500px", opacity: 0, scale: 0, }} animate={controls} className="container">
-            <img className="img" src={perfilFoto}  alt="user" />
+            <img className="img" src={perfilFoto}  alt="Perfil" />
             <h2 className="developer"><BsFillKeyboardFill /> FullStack Developer</h2>
             <h2 className="location"><BsFillGeoAltFill /> Córdoba, Argentina</h2>
             <p className="description">

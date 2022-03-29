@@ -19,8 +19,9 @@
     top: -150px;
     border: 5px solid var(--background);
     border-radius: 50%;
-    width: 300px;
-    object-fit: fill;
+    width: 250px;
+    height: 250px;
+    object-fit:cover;
 }
 .developer{
     margin-top: 100px;
@@ -59,10 +60,7 @@
 .icon:hover{
     color: var(--primary);
 }
-/* SMARTPHONES PORTRAIT */
-@media only screen and (min-width: 300px) {
 
-}
 
 /* TABLETS PORTRAIT */
 @media only screen and (max-width: 768px) {
